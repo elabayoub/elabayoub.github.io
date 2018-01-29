@@ -238,27 +238,27 @@ var ContactsService = /** @class */ (function () {
         this.http = http;
     }
     ContactsService.prototype.searchContacts = function (motCle, page, size) {
-        return this.http.get('http://localhost:8080/search?keyword=' + motCle + '&size=' + size + '&page=' + page)
+        return this.http.get('https://localhost:8443/search?keyword=' + motCle + '&size=' + size + '&page=' + page)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.getAllContacts = function (page, size) {
-        return this.http.get('http://localhost:8080/contacts?size=' + size + '&page=' + page)
+        return this.http.get('https://localhost:8443/contacts?size=' + size + '&page=' + page)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.saveContact = function (contact) {
-        return this.http.post('http://localhost:8080/contacts', contact)
+        return this.http.post('https://localhost:8443/contacts', contact)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.getContactById = function (id) {
-        return this.http.get('http://localhost:8080/contacts/' + id)
+        return this.http.get('https://localhost:8443/contacts/' + id)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.updateContact = function (contact) {
-        return this.http.put('http://localhost:8080/contacts/' + contact.id, contact)
+        return this.http.put('https://localhost:8443/contacts/' + contact.id, contact)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.deleteById = function (id) {
-        return this.http.delete('http://localhost:8080/contacts/' + id)
+        return this.http.delete('https://localhost:8443/contacts/' + id)
             .map(function (res) { return res.json(); });
     };
     ContactsService = __decorate([
