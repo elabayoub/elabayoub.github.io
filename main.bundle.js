@@ -60,7 +60,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
-        this.infos = { fullname: "EL ABOUSSI Ayoub", mail: "aelaboussi@ayaline.com" };
+        this.infos = { fullname: "EL ABOUSSI Ayoub", mail: "aelaboussi@aya.com" };
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
