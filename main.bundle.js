@@ -238,27 +238,27 @@ var ContactsService = /** @class */ (function () {
         this.http = http;
     }
     ContactsService.prototype.searchContacts = function (motCle, page, size) {
-        return this.http.get('https://http://192.168.99.11/:8443/search?keyword=' + motCle + '&size=' + size + '&page=' + page)
+        return this.http.get('https://192.168.99.11:8443/search?keyword=' + motCle + '&size=' + size + '&page=' + page)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.getAllContacts = function (page, size) {
-        return this.http.get('https://http://192.168.99.11/:8443/contacts?size=' + size + '&page=' + page)
+        return this.http.get('https://192.168.99.11:8443/contacts?size=' + size + '&page=' + page)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.saveContact = function (contact) {
-        return this.http.post('https://http://192.168.99.11/:8443/contacts', contact)
+        return this.http.post('https://192.168.99.11:8443/contacts', contact)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.getContactById = function (id) {
-        return this.http.get('https://http://192.168.99.11/:8443/contacts/' + id)
+        return this.http.get('https://192.168.99.11:8443/contacts/' + id)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.updateContact = function (contact) {
-        return this.http.put('https://http://192.168.99.11/:8443/contacts/' + contact.id, contact)
+        return this.http.put('https://192.168.99.11:8443/contacts/' + contact.id, contact)
             .map(function (res) { return res.json(); });
     };
     ContactsService.prototype.deleteById = function (id) {
-        return this.http.delete('https://http://192.168.99.11/:8443/contacts/' + id)
+        return this.http.delete('https://192.168.99.11:8443/contacts/' + id)
             .map(function (res) { return res.json(); });
     };
     ContactsService = __decorate([
